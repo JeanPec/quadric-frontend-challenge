@@ -1,0 +1,17 @@
+.trace {
+    margin: 10px 0;
+}
+
+.job-content{
+    display: grid;
+    grid-template-columns: 1fr 2fr 4fr 2fr ;
+    align-items: center;
+    justify-items: center;
+}
+
+@media screen and (max-width: 760px) {
+    .job-content {
+    grid-template-columns: 1fr 1fr ;
+    grid-template-rows:  1fr 1fr;
+    }
+  }

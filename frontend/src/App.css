@@ -1,0 +1,21 @@
+main {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  height: 100vh;
+  margin: 20px 50px;
+  overflow: auto;
+}
+@media screen and (max-width: 760px) {
+  main {
+    margin: 10px 15px;
+  }
+  h2 {
+    font-size: medium;
+  }
+}
+
+
+h1 {
+  margin: 10px;
+}
