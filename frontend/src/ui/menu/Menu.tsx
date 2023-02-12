@@ -1,7 +1,7 @@
-import React, { HTMLProps } from 'react';
+import React, { HTMLProps } from "react";
 
-import './Menu.css';
+import "./Menu.css";
 
 export const Menu = ({ className, ...props }: HTMLProps<HTMLUListElement>) => (
-  <ul role="menu" className={'menu'} {...props} />
+  <ul role="menu" className={"menu"} {...props} />
 );

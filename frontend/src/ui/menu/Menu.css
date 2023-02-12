@@ -1,20 +1,20 @@
 .menu {
-    position: relative;
-    padding: 8px;
-    margin: 0;
-    border: 20%;
-    white-space: nowrap;
-    max-height: 40vh;
-    overflow: auto;
-  }
+  position: relative;
+  padding: 8px;
+  margin: 0;
+  border: 20%;
+  white-space: nowrap;
+  max-height: 40vh;
+  overflow: auto;
+}
 
-  .menu-item {
-    margin: 0;
-    padding: 8px;
-    list-style-type: none;
-    border-bottom : 1px solid grey;
-  }
+.menu-item {
+  margin: 0;
+  padding: 8px;
+  list-style-type: none;
+  border-bottom: 1px solid grey;
+}
 
-  .menu-item:last-child {
-    border: 0;
-  }
+.menu-item:last-child {
+  border: 0;
+}

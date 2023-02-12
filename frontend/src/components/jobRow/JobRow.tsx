@@ -1,17 +1,10 @@
-import React, { useRef } from "react";
-import { useFetch } from "../../customeHooks/useFetch";
+import { useRef } from "react";
+
 import { Badge, Loader } from "../../ui";
 import { TraceType } from "../../utils";
+import { useFetch } from "../../customHooks";
 
 import "./JobRow.css";
-
-export interface JobRowProps {
-  id: number;
-  state: boolean;
-  duration: string;
-  stage: string;
-  createdDate: string;
-}
 
 /*
     Job Row:
@@ -21,6 +14,14 @@ export interface JobRowProps {
         - For Repsonsiveness change the grid layout
         - TO DO use new Table Component for the Job ( keep modal as a preview and if the user want to see more jobs he can click on a link to the new page)
  */
+
+export interface JobRowProps {
+  id: number;
+  state: boolean;
+  duration: string;
+  stage: string;
+  createdDate: string;
+}
 
 let globalId = 0;
 
@@ -33,9 +34,13 @@ export const JobRow = ({
 }: JobRowProps) => {
   const { current: ariaId } = useRef(`job-${globalId++}`);
 
-  const { data: traces, loading: loadingTraces} = useFetch({endpoint: "traces"});
+  const { data: traces, loading: loadingTraces } = useFetch({
+    endpoint: "traces",
+  });
 
-  const tracesFiltered = (traces as TraceType[]).find((trace: TraceType)=> trace.job_id === id);
+  const tracesFiltered = (traces as TraceType[]).find(
+    (trace: TraceType) => trace.job_id === id
+  );
 
   return (
     <>
@@ -61,11 +66,15 @@ export const JobRow = ({
           <span aria-labelledby={`duration-${ariaId}`}>{stage}</span>
         </section>
       </div>
-      { loadingTraces && <Loader />}
-      { !loadingTraces && <section className="trace">
-        <label id={`trace-${ariaId}`}>Trace : </label>
-        <pre aria-labelledby={`trace-${ariaId}`}>{tracesFiltered ? tracesFiltered.content :  'Empty Log'}</pre>
-      </section>}
+      {loadingTraces && <Loader />}
+      {!loadingTraces && (
+        <section className="trace">
+          <label id={`trace-${ariaId}`}>Trace : </label>
+          <pre aria-labelledby={`trace-${ariaId}`}>
+            {tracesFiltered ? tracesFiltered.content : "Empty Log"}
+          </pre>
+        </section>
+      )}
     </>
   );
 };

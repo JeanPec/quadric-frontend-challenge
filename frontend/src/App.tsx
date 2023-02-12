@@ -1,6 +1,5 @@
-import React from 'react';
-import './App.css';
-import { WorkflowTables } from './components';
+import "./App.css";
+import { WorkflowTables } from "./components";
 
 function App() {
   return (
@@ -8,8 +7,8 @@ function App() {
       <header>
         <h1>Workflows</h1>
       </header>
-    <WorkflowTables />
-</main>
+      <WorkflowTables />
+    </main>
   );
 }
 

@@ -1,19 +1,19 @@
 .badge {
-    border: 0;
-    background: transparent;
-    display: inline-flex;
-    flex-wrap: nowrap;
-    align-items: center;
-    white-space: nowrap;
-    border-radius: 15%;
-    padding: 5px;
-    cursor:default;
-  }
+  border: 0;
+  background: transparent;
+  display: inline-flex;
+  flex-wrap: nowrap;
+  align-items: center;
+  white-space: nowrap;
+  border-radius: 15%;
+  padding: 5px;
+  cursor: default;
+}
 
-  .fail {
-    background: #e61b00;
-  }
+.fail {
+  background: #e61b00;
+}
 
-  .success {
-    background: #227e46;
-  }
+.success {
+  background: #227e46;
+}

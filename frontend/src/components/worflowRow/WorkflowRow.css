@@ -1,12 +1,12 @@
-.content-row:first-child { 
-    border-top: dashed white;
-  }
+.content-row:first-child {
+  border-top: dashed white;
+}
 
-  .content-row { 
-    border-top: solid white;
-    border-width: 1px 0;
-  }
+.content-row {
+  border-top: solid white;
+  border-width: 1px 0;
+}
 
-  .centered {
-    text-align: center;
-  }
+.centered {
+  text-align: center;
+}

@@ -1,3 +1,8 @@
+/*
+    types:
+        - types for the rest querries
+ */
+
 export type WorkflowType = {
   created_at: string;
   id: number;

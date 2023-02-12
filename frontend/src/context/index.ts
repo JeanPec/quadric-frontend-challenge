@@ -1,1 +1,1 @@
-export { ConfigProvider, useConfig} from './Config';
+export { ConfigProvider, useConfig } from "./Config";
