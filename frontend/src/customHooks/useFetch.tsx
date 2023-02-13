@@ -32,7 +32,7 @@ export const useFetch = ({
         if (writeToCacheBoolean)
           writeToCache(`http://localhost:3001/${endpoint}`, response.data);
       })
-      .catch((error) => setError(error))
+      .catch((error: any) => setError(error))
       .finally(() => setLoading(false));
   }, [endpoint, writeToCacheBoolean]);
 
